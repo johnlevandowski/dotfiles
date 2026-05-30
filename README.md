@@ -26,6 +26,10 @@ gh repo create
 dotgit remote add origin https://github.com/johnlevandowski/dotfiles.git
 ```
 
+
+Add dotfiles to git repository
+------------------------------
+
 ```
 dotgit status
 dotgit add $HOME/.config/fish/config.fish
@@ -39,19 +43,16 @@ Restore dotfiles from git repository
 
 ```
 chsh -s $(which fish)
-```
-
-Logout and Login for new shell to take effect
-
-```
 git clone --separate-git-dir=$HOME/dot.git https://github.com/johnlevandowski/dotfiles.git $HOME/dot.git-tmp
 alias dotgit='git --git-dir=$HOME/dot.git/ --work-tree=$HOME'
-dotgit restore .
-# rsync --recursive --verbose --exclude '.git' $HOME/dot.git-tmp/ $HOME/
-source $HOME/.config/fish/config.fish
-rm -rf $HOME/dot.git-tmp
 dotgit config status.showUntrackedFiles no
+dotgit status
+dotgit diff
+dotgit restore .
+rm -rf $HOME/dot.git-tmp
 ```
+
+Logout and Login for new dotfiles to take effect
 
 
 find what to track
