@@ -34,7 +34,7 @@ Add dotfiles to git repository
 dotgit status
 dotgit add $HOME/.config/fish/config.fish
 dotgit commit -m "config.fish"
-git push -u origin main
+dotgit push -u origin main
 ```
 
 
