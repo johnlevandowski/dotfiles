@@ -34,7 +34,7 @@ Add dotfiles to git repository
 dotgit status
 dotgit add $HOME/.config/fish/config.fish
 dotgit commit -m "config.fish"
-dotgit push origin main
+git push -u origin main
 ```
 
 
@@ -55,8 +55,9 @@ rm -rf $HOME/dot.git-tmp
 Logout and Login for new dotfiles to take effect
 
 
-find what to track
-------------------
+Dotfiles different from skel
+----------------------------
 
-show only diff files from /etc/skel  
+```
 diff -rq $HOME /etc/skel/ | grep -v "^Only in"
+```
