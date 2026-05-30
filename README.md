@@ -1,8 +1,6 @@
 Managing dotfiles
 =================
 
-https://stegosaurusdormant.com/bare-git-repo/
-
 Setup dotfiles git repository
 -----------------------------
 
@@ -32,7 +30,7 @@ dotgit remote add origin https://github.com/johnlevandowski/dotfiles.git
 dotgit status
 dotgit add $HOME/.config/fish/config.fish
 dotgit commit -m "config.fish"
-dotgit push origin master
+dotgit push origin main
 ```
 
 
