@@ -61,3 +61,12 @@ Dotfiles different from skel
 ```
 diff -rq $HOME /etc/skel/ | grep -v "^Only in"
 ```
+
+
+Enable backup timer/service/script
+----------------------------------
+
+```
+systemctl --user daemon-reload
+systemctl --user enable --now dev.johnl.backup.timer
+```
