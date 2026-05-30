@@ -1,0 +1,6 @@
+[Unit]
+Description=Backup
+
+[Service]
+Type=oneshot
+ExecStart=/home/john/.local/bin/dev.johnl.backup.sh

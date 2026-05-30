@@ -1,0 +1,11 @@
+[Unit]
+Description=Backup
+
+[Timer]
+# First run 10 minutes after timer starts (upon login)
+OnActiveSec=10min
+# Subsequent runs every hour after the previous run
+OnUnitActiveSec=1h
+
+[Install]
+WantedBy=timers.target
