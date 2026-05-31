@@ -38,6 +38,14 @@ dotgit push -u origin main
 ```
 
 
+Dotfiles different from skel
+----------------------------
+
+```
+diff -rq $HOME /etc/skel/ | grep -v "^Only in"
+```
+
+
 Restore dotfiles from git repository
 ------------------------------------
 
@@ -55,14 +63,6 @@ rm -rf $HOME/dot.git-tmp
 Logout and Login for new dotfiles to take effect
 
 
-Dotfiles different from skel
-----------------------------
-
-```
-diff -rq $HOME /etc/skel/ | grep -v "^Only in"
-```
-
-
 Enable backup timer/service/script
 ----------------------------------
 
@@ -76,6 +76,6 @@ Wallpaper Images
 ----------------
 
 ```
-cp 1440x2560.jpg $HOME/.local/share/wallpapers/levyos/contents/images/
-cp 2560x1440.jpg $HOME/.local/share/wallpapers/levyos/contents/images/
+cp 1440x2560.jpg $HOME/.local/share/wallpapers/devjohnl/contents/images/
+cp 2560x1440.jpg $HOME/.local/share/wallpapers/devjohnl/contents/images/
 ```
