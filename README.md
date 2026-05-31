@@ -70,3 +70,12 @@ Enable backup timer/service/script
 systemctl --user daemon-reload
 systemctl --user enable --now dev.johnl.backup.timer
 ```
+
+
+Wallpaper Images
+----------------
+
+```
+cp 1440x2560.jpg $HOME/.local/share/wallpapers/levyos/contents/images/
+cp 2560x1440.jpg $HOME/.local/share/wallpapers/levyos/contents/images/
+```
