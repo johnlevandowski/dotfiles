@@ -1,0 +1,645 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Options for saved report "Balance Sheet", based on template "c4173ac99b2b448289bf4d11c731af13"
+(let ()
+  (define (options-gen)
+    (let
+         (
+           (options (gnc:report-template-new-options/report-guid "c4173ac99b2b448289bf4d11c731af13" "Balance Sheet"))
+           (new-embedded-report-ids '()) ;; only used with Multicolumn View Reports
+         )
+; Section: Accounts
+
+(let ((option (gnc:lookup-option options
+                                 "Accounts"
+                                 "Accounts")))
+  ((lambda (o) (if o (gnc:option-set-value o '("df952897240b4566a33093d30bdaf014" "4a0bbd9725e2f9e7a6c4c5806dd38cea" "0230abf97d921bb99c1965c4114b4b48" "4034695c5e554025a03ea4f811bb8859" "f4773272b97441e981028de0c3dd338e" "fb5479160a75010dac1db7e061880ca0" "12ed82e39db3618c9e1d1251d5ea00ce" "080a52093006f90b82d4056a5a15543a" "2b3c058545e17a5cb61d14578331d8d5" "14e72d4ca2175303c629f1a1bc3f871f" "bad656baaebd487eabe68dbb9c70a667" "8c89566eb01cae21a0820699b8bd075a" "e842306a6998e9f97c1c608f04f6c7d3" "07a5198000ed9fa12df37ca8c99db6ea" "78485e70421f4dbaa0fdbe6568e42bb6" "59d60886ce30ebf93c955c559c8e73c6" "5d1e343613280de2bc0b6be1b240d5db" "4916c6df780225c5d649e8452d2db852" "63dc83edee7b9f15dabe664162c5e43d" "d768262f51448ada47ff08b61043de3b" "9c55ee5c4d9e96143004bf387965ea8c" "f4beca4283d1c774cf55900824bd45d8" "f520e49a2d8054429d317fd2c9b7ab4d" "a63798f30f220836ea62b38fb373afe8" "bac87f2ba3e16487f945e3676f6f01ba" "511630376266a7f32f0cdeb3b91552ea" "e367cc6aa3892f641e51d7cb62b40a28" "deed3de1a7bb2fb4abc6a7f002528d35" "606db8a68061b98b6c2cbbca45811ce9" "d3a5e25278b3c78b15f68e06f801d634" "acde63dafff530aa1c656922a1a8350c" "e61dec5569f464dbb2af30199698b727" "b7cb0381c9f2bb0062ddd475a2f8d896" "f01c3f73e2cae50b91fce0690d84203e" "51f18240300842660ffeb01a1090484b" "d1f88eefd519925e03d4a21ea3788d9f" "d02fc6d307a01093324c43d9c9742fd0" "d3c41fdce0e177809aea4ff9b3c5a853" "f40dc6c345da5c43ef3616c721537ab5" "aa93569124854b7fc42a978bdb0bdd51" "a26f5fb172c831a1be62238397665177" "bda23791ae50cc329e143f82768524f3" "9ef24ee1bab58e4861538403e348ac47" "28fb2056c85e74cd8caf290e34381ada" "8bbc204f7e305be30eaa746d9be3f913" "d1be4bebe1633427e6e41d73761ab5c7" "4f335321220e8593e77b8af437f9b59a" "6776dc421746e412fec5f9f81116c9e4" "19b0620cb4ba6c8b40fd372812923fb8" "dfdd55679bd44b0080c4400d3fb84026" "487b8835e0eca39148314beb696a56e5" "eb4d1d84405472f97f0f256478714175" "822aa9be2bd1a368e9d54c47fafa5cda" "aaa0060f6b6a315de6780e70032bb1c3" "ceff5cb9b60be69a2686abb5fe121171" "263afdc03ef4c127ef57bc403d411156" "0728ded475a64e7297d23c7312ace07b" "f6ba75d427b8b1683dfdaef55887c73a" "368781670e824295a3472835b3cf6e04" "a9cc1a525d376ac1232f6a1c350d0834" "171e0d0b664add82ce94d0202a5b2722" "1aaa7b79150ff4416e24e510a8a52d08" "2cad79a2cf18443c93e17efcfa9c75f8" "8bec158ac5f744d1aa0569120e81fa83" "e390bab24b5414ff6d2bc3e73692c850" "31d153f6e0015e0310d9b7979480eb04" "743d4ea4bf311519c3446299bacc6744" "f0a4bc0cd8804dcda14793b3d77edd57" "c01775fe1e5c97df7f1b0dbfea263b26" "7f362af7e0704016918752f2681c83a4" "bc7f5e424efbe4e300cacccb969985f7" "a96404d52a91fdb98bf1ebd004d04a16" "3a49a9587fcb24f09e56ae1794895e32" "0b5e675a48b6c143e55c5091c84a28bf")))) option))
+
+(let ((option (gnc:lookup-option options
+                                 "Accounts"
+                                 "Levels of Subaccounts")))
+  ((lambda (o) (if o (gnc:option-set-value o '4))) option))
+
+
+; Section: Commodities
+
+
+; Section: Display
+
+(let ((option (gnc:lookup-option options
+                                 "Display"
+                                 "Include accounts with zero total balances")))
+  ((lambda (o) (if o (gnc:option-set-value o #f))) option))
+
+(let ((option (gnc:lookup-option options
+                                 "Display"
+                                 "Parent account balances")))
+  ((lambda (o) (if o (gnc:option-set-value o 'omit-bal))) option))
+
+(let ((option (gnc:lookup-option options
+                                 "Display"
+                                 "Parent account subtotals")))
+  ((lambda (o) (if o (gnc:option-set-value o 't))) option))
+
+(let ((option (gnc:lookup-option options
+                                 "Display"
+                                 "Show accounting-style rules")))
+  ((lambda (o) (if o (gnc:option-set-value o #t))) option))
+
+
+; Section: General
+
+(let ((option (gnc:lookup-option options
+                                 "General"
+                                 "Balance Sheet Date")))
+  ((lambda (o) (if o (gnc:option-set-value o '(relative . end-this-month)))) option))
+
+
+      options
+    )
+  )
+  (gnc:define-report 
+    'version 1
+    'name "Balance Sheet"
+    'report-guid "1d6f0665a31a4c08b8c76d447980d3c4"
+    'parent-type "c4173ac99b2b448289bf4d11c731af13"
+    'options-generator options-gen
+    'menu-path (list gnc:menuname-custom)
+    'renderer (gnc:report-template-renderer/report-guid "c4173ac99b2b448289bf4d11c731af13" "Balance Sheet")
+  )
+)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Options for saved report "Income Statement", based on template "0b81a3bdfd504aff849ec2e8630524bc"
+(let ()
+  (define (options-gen)
+    (let
+         (
+           (options (gnc:report-template-new-options/report-guid "0b81a3bdfd504aff849ec2e8630524bc" "Income Statement"))
+           (new-embedded-report-ids '()) ;; only used with Multicolumn View Reports
+         )
+; Section: Accounts
+
+(let ((option (gnc:lookup-option options
+                                 "Accounts"
+                                 "Accounts")))
+  ((lambda (o) (if o (gnc:option-set-value o '("df952897240b4566a33093d30bdaf014" "4a0bbd9725e2f9e7a6c4c5806dd38cea" "0230abf97d921bb99c1965c4114b4b48" "4034695c5e554025a03ea4f811bb8859" "f4773272b97441e981028de0c3dd338e" "fb5479160a75010dac1db7e061880ca0" "12ed82e39db3618c9e1d1251d5ea00ce" "080a52093006f90b82d4056a5a15543a" "2b3c058545e17a5cb61d14578331d8d5" "14e72d4ca2175303c629f1a1bc3f871f" "bad656baaebd487eabe68dbb9c70a667" "8c89566eb01cae21a0820699b8bd075a" "e842306a6998e9f97c1c608f04f6c7d3" "07a5198000ed9fa12df37ca8c99db6ea" "78485e70421f4dbaa0fdbe6568e42bb6" "59d60886ce30ebf93c955c559c8e73c6" "5d1e343613280de2bc0b6be1b240d5db" "4916c6df780225c5d649e8452d2db852" "63dc83edee7b9f15dabe664162c5e43d" "d768262f51448ada47ff08b61043de3b" "9c55ee5c4d9e96143004bf387965ea8c" "f4beca4283d1c774cf55900824bd45d8" "f520e49a2d8054429d317fd2c9b7ab4d" "a63798f30f220836ea62b38fb373afe8" "bac87f2ba3e16487f945e3676f6f01ba" "511630376266a7f32f0cdeb3b91552ea" "e367cc6aa3892f641e51d7cb62b40a28" "606db8a68061b98b6c2cbbca45811ce9" "d3a5e25278b3c78b15f68e06f801d634" "acde63dafff530aa1c656922a1a8350c" "e61dec5569f464dbb2af30199698b727" "b7cb0381c9f2bb0062ddd475a2f8d896" "f01c3f73e2cae50b91fce0690d84203e" "51f18240300842660ffeb01a1090484b" "d1f88eefd519925e03d4a21ea3788d9f" "d02fc6d307a01093324c43d9c9742fd0" "d3c41fdce0e177809aea4ff9b3c5a853" "f40dc6c345da5c43ef3616c721537ab5" "aa93569124854b7fc42a978bdb0bdd51" "a26f5fb172c831a1be62238397665177" "bda23791ae50cc329e143f82768524f3" "9ef24ee1bab58e4861538403e348ac47" "28fb2056c85e74cd8caf290e34381ada" "8bbc204f7e305be30eaa746d9be3f913" "d1be4bebe1633427e6e41d73761ab5c7" "4f335321220e8593e77b8af437f9b59a" "6776dc421746e412fec5f9f81116c9e4" "19b0620cb4ba6c8b40fd372812923fb8" "dfdd55679bd44b0080c4400d3fb84026" "487b8835e0eca39148314beb696a56e5" "eb4d1d84405472f97f0f256478714175" "822aa9be2bd1a368e9d54c47fafa5cda" "aaa0060f6b6a315de6780e70032bb1c3" "ceff5cb9b60be69a2686abb5fe121171" "263afdc03ef4c127ef57bc403d411156" "0728ded475a64e7297d23c7312ace07b" "f6ba75d427b8b1683dfdaef55887c73a" "368781670e824295a3472835b3cf6e04" "a9cc1a525d376ac1232f6a1c350d0834" "171e0d0b664add82ce94d0202a5b2722" "1aaa7b79150ff4416e24e510a8a52d08" "2cad79a2cf18443c93e17efcfa9c75f8" "8bec158ac5f744d1aa0569120e81fa83" "e390bab24b5414ff6d2bc3e73692c850" "31d153f6e0015e0310d9b7979480eb04" "743d4ea4bf311519c3446299bacc6744" "f0a4bc0cd8804dcda14793b3d77edd57" "c01775fe1e5c97df7f1b0dbfea263b26" "7f362af7e0704016918752f2681c83a4" "bc7f5e424efbe4e300cacccb969985f7" "a96404d52a91fdb98bf1ebd004d04a16" "3a49a9587fcb24f09e56ae1794895e32" "0b5e675a48b6c143e55c5091c84a28bf")))) option))
+
+
+; Section: Commodities
+
+
+; Section: Display
+
+(let ((option (gnc:lookup-option options
+                                 "Display"
+                                 "Include accounts with zero total balances")))
+  ((lambda (o) (if o (gnc:option-set-value o #f))) option))
+
+
+; Section: Entries
+
+
+; Section: General
+
+
+      options
+    )
+  )
+  (gnc:define-report 
+    'version 1
+    'name "Income Statement"
+    'report-guid "a04cb7c96c164796b549dd994e60c059"
+    'parent-type "0b81a3bdfd504aff849ec2e8630524bc"
+    'options-generator options-gen
+    'menu-path (list gnc:menuname-custom)
+    'renderer (gnc:report-template-renderer/report-guid "0b81a3bdfd504aff849ec2e8630524bc" "Income Statement")
+  )
+)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Options for saved report "Vacation Fund Over Time", based on template "faf410e8f8da481fbc09e4763da40bcc"
+(let ()
+  (define (options-gen)
+    (let
+         (
+           (options (gnc:report-template-new-options/report-guid "faf410e8f8da481fbc09e4763da40bcc" "Liabilities Over Time"))
+           (new-embedded-report-ids '()) ;; only used with Multicolumn View Reports
+         )
+; Section: Accounts
+
+(let ((option (gnc:lookup-option options
+                                 "Accounts"
+                                 "Accounts")))
+  ((lambda (o) (if o (gnc:option-set-value o '("4a0bbd9725e2f9e7a6c4c5806dd38cea")))) option))
+
+(let ((option (gnc:lookup-option options
+                                 "Accounts"
+                                 "Levels of Subaccounts")))
+  ((lambda (o) (if o (gnc:option-set-value o 'all))) option))
+
+
+; Section: Display
+
+
+; Section: General
+
+(let ((option (gnc:lookup-option options
+                                 "General"
+                                 "Report name")))
+  ((lambda (o) (if o (gnc:option-set-value o "Vacation Fund"))) option))
+
+(let ((option (gnc:lookup-option options
+                                 "General"
+                                 "Start Date")))
+  ((lambda (o) (if o (gnc:option-set-value o '(absolute . 1612090740)))) option))
+
+(let ((option (gnc:lookup-option options
+                                 "General"
+                                 "End Date")))
+  ((lambda (o) (if o (gnc:option-set-value o '(relative . end-this-month)))) option))
+
+(let ((option (gnc:lookup-option options
+                                 "General"
+                                 "Price Source")))
+  ((lambda (o) (if o (gnc:option-set-value o 'pricedb-latest))) option))
+
+
+      options
+    )
+  )
+  (gnc:define-report 
+    'version 1
+    'name "Vacation Fund Over Time"
+    'report-guid "a1e7c03ff3c745e39cc604e88feef16f"
+    'parent-type "faf410e8f8da481fbc09e4763da40bcc"
+    'options-generator options-gen
+    'menu-path (list gnc:menuname-custom)
+    'renderer (gnc:report-template-renderer/report-guid "faf410e8f8da481fbc09e4763da40bcc" "Liabilities Over Time")
+  )
+)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Options for saved report "Interest Income", based on template "2fe3b9833af044abb929a88d5a59620f"
+(let ()
+  (define (options-gen)
+    (let
+         (
+           (options (gnc:report-template-new-options/report-guid "2fe3b9833af044abb929a88d5a59620f" "Transaction Report"))
+           (new-embedded-report-ids '()) ;; only used with Multicolumn View Reports
+         )
+; Section: Accounts
+
+(let ((option (gnc:lookup-option options
+                                 "Accounts"
+                                 "Accounts")))
+  ((lambda (o) (if o (gnc:option-set-value o '("f520e49a2d8054429d317fd2c9b7ab4d")))) option))
+
+
+; Section: Currency
+
+
+; Section: Display
+
+(let ((option (gnc:lookup-option options
+                                 "Display"
+                                 "Subtotal Table")))
+  ((lambda (o) (if o (gnc:option-set-value o #t))) option))
+
+
+; Section: Filter
+
+
+; Section: General
+
+(let ((option (gnc:lookup-option options
+                                 "General"
+                                 "Report name")))
+  ((lambda (o) (if o (gnc:option-set-value o "Interest Income"))) option))
+
+(let ((option (gnc:lookup-option options
+                                 "General"
+                                 "Start Date")))
+  ((lambda (o) (if o (gnc:option-set-value o '(relative . start-prev-year)))) option))
+
+(let ((option (gnc:lookup-option options
+                                 "General"
+                                 "End Date")))
+  ((lambda (o) (if o (gnc:option-set-value o '(relative . end-cal-year)))) option))
+
+
+; Section: Sorting
+
+(let ((option (gnc:lookup-option options
+                                 "Sorting"
+                                 "Primary Key")))
+  ((lambda (o) (if o (gnc:option-set-value o 'date))) option))
+
+(let ((option (gnc:lookup-option options
+                                 "Sorting"
+                                 "Primary Subtotal for Date Key")))
+  ((lambda (o) (if o (gnc:option-set-value o 'quarterly))) option))
+
+(let ((option (gnc:lookup-option options
+                                 "Sorting"
+                                 "Secondary Key")))
+  ((lambda (o) (if o (gnc:option-set-value o 'date))) option))
+
+
+; Section: __trep
+
+
+      options
+    )
+  )
+  (gnc:define-report 
+    'version 1
+    'name "Interest Income"
+    'report-guid "db2ba137c4804e6f985cba144919a3df"
+    'parent-type "2fe3b9833af044abb929a88d5a59620f"
+    'options-generator options-gen
+    'menu-path (list gnc:menuname-custom)
+    'renderer (gnc:report-template-renderer/report-guid "2fe3b9833af044abb929a88d5a59620f" "Transaction Report")
+  )
+)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Options for saved report "Vacation Fund by Description", based on template "2fe3b9833af044abb929a88d5a59620f"
+(let ()
+  (define (options-gen)
+    (let
+         (
+           (options (gnc:report-template-new-options/report-guid "2fe3b9833af044abb929a88d5a59620f" "Transaction Report"))
+           (new-embedded-report-ids '()) ;; only used with Multicolumn View Reports
+         )
+; Section: Accounts
+
+(let ((option (gnc:lookup-option options
+                                 "Accounts"
+                                 "Accounts")))
+  ((lambda (o) (if o (gnc:option-set-value o '("4a0bbd9725e2f9e7a6c4c5806dd38cea")))) option))
+
+
+; Section: Currency
+
+
+; Section: Display
+
+
+; Section: Filter
+
+(let ((option (gnc:lookup-option options
+                                 "Filter"
+                                 "Transaction Filter")))
+  ((lambda (o) (if o (gnc:option-set-value o "Vacation Fund|Home Maintenance Fund"))) option))
+
+(let ((option (gnc:lookup-option options
+                                 "Filter"
+                                 "Use regular expressions for transaction filter")))
+  ((lambda (o) (if o (gnc:option-set-value o #t))) option))
+
+(let ((option (gnc:lookup-option options
+                                 "Filter"
+                                 "Transaction Filter excludes matched strings")))
+  ((lambda (o) (if o (gnc:option-set-value o #t))) option))
+
+
+; Section: General
+
+(let ((option (gnc:lookup-option options
+                                 "General"
+                                 "Start Date")))
+  ((lambda (o) (if o (gnc:option-set-value o '(absolute . 1704106740)))) option))
+
+(let ((option (gnc:lookup-option options
+                                 "General"
+                                 "End Date")))
+  ((lambda (o) (if o (gnc:option-set-value o '(relative . end-cal-year)))) option))
+
+
+; Section: Sorting
+
+(let ((option (gnc:lookup-option options
+                                 "Sorting"
+                                 "Primary Key")))
+  ((lambda (o) (if o (gnc:option-set-value o 'description))) option))
+
+(let ((option (gnc:lookup-option options
+                                 "Sorting"
+                                 "Secondary Key")))
+  ((lambda (o) (if o (gnc:option-set-value o 'date))) option))
+
+(let ((option (gnc:lookup-option options
+                                 "Sorting"
+                                 "Secondary Subtotal for Date Key")))
+  ((lambda (o) (if o (gnc:option-set-value o 'none))) option))
+
+
+; Section: __trep
+
+
+      options
+    )
+  )
+  (gnc:define-report 
+    'version 1
+    'name "Vacation Fund by Description"
+    'report-guid "1617909a26204b1a929d088fdd151320"
+    'parent-type "2fe3b9833af044abb929a88d5a59620f"
+    'options-generator options-gen
+    'menu-path (list gnc:menuname-custom)
+    'renderer (gnc:report-template-renderer/report-guid "2fe3b9833af044abb929a88d5a59620f" "Transaction Report")
+  )
+)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Options for saved report "Savings less Credit Cards", based on template "cbba1696c8c24744848062c7f1cf4a72"
+(let ()
+  (define (options-gen)
+    (let
+         (
+           (options (gnc:report-template-new-options/report-guid "cbba1696c8c24744848062c7f1cf4a72" "Net Worth Barchart"))
+           (new-embedded-report-ids '()) ;; only used with Multicolumn View Reports
+         )
+; Section: Accounts
+
+(let ((option (gnc:lookup-option options
+                                 "Accounts"
+                                 "Accounts")))
+  ((lambda (o) (if o (gnc:option-set-value o '("df952897240b4566a33093d30bdaf014" "0230abf97d921bb99c1965c4114b4b48" "f4773272b97441e981028de0c3dd338e" "fb5479160a75010dac1db7e061880ca0" "12ed82e39db3618c9e1d1251d5ea00ce" "080a52093006f90b82d4056a5a15543a" "2b3c058545e17a5cb61d14578331d8d5" "14e72d4ca2175303c629f1a1bc3f871f" "bad656baaebd487eabe68dbb9c70a667" "8c89566eb01cae21a0820699b8bd075a" "e842306a6998e9f97c1c608f04f6c7d3" "d768262f51448ada47ff08b61043de3b" "368781670e824295a3472835b3cf6e04" "a9cc1a525d376ac1232f6a1c350d0834" "171e0d0b664add82ce94d0202a5b2722" "1aaa7b79150ff4416e24e510a8a52d08" "2cad79a2cf18443c93e17efcfa9c75f8" "8bec158ac5f744d1aa0569120e81fa83" "e390bab24b5414ff6d2bc3e73692c850" "31d153f6e0015e0310d9b7979480eb04" "743d4ea4bf311519c3446299bacc6744" "f0a4bc0cd8804dcda14793b3d77edd57" "c01775fe1e5c97df7f1b0dbfea263b26" "7f362af7e0704016918752f2681c83a4" "bc7f5e424efbe4e300cacccb969985f7" "a96404d52a91fdb98bf1ebd004d04a16" "3a49a9587fcb24f09e56ae1794895e32" "0b5e675a48b6c143e55c5091c84a28bf")))) option))
+
+
+; Section: Display
+
+(let ((option (gnc:lookup-option options
+                                 "Display"
+                                 "Show Asset & Liability")))
+  ((lambda (o) (if o (gnc:option-set-value o #f))) option))
+
+
+; Section: General
+
+(let ((option (gnc:lookup-option options
+                                 "General"
+                                 "Report name")))
+  ((lambda (o) (if o (gnc:option-set-value o "Savings less Credit Cards"))) option))
+
+(let ((option (gnc:lookup-option options
+                                 "General"
+                                 "Start Date")))
+  ((lambda (o) (if o (gnc:option-set-value o '(absolute . 1704020340)))) option))
+
+(let ((option (gnc:lookup-option options
+                                 "General"
+                                 "End Date")))
+  ((lambda (o) (if o (gnc:option-set-value o '(relative . end-cal-year)))) option))
+
+
+      options
+    )
+  )
+  (gnc:define-report 
+    'version 1
+    'name "Savings less Credit Cards"
+    'report-guid "2481e43748dc44d6aafb9a7355c9b697"
+    'parent-type "cbba1696c8c24744848062c7f1cf4a72"
+    'options-generator options-gen
+    'menu-path (list gnc:menuname-custom)
+    'renderer (gnc:report-template-renderer/report-guid "cbba1696c8c24744848062c7f1cf4a72" "Net Worth Barchart")
+  )
+)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Options for saved report "Health Fund over Time", based on template "faf410e8f8da481fbc09e4763da40bcc"
+(let ()
+  (define (options-gen)
+    (let
+         (
+           (options (gnc:report-template-new-options/report-guid "faf410e8f8da481fbc09e4763da40bcc" "Liabilities Over Time"))
+           (new-embedded-report-ids '()) ;; only used with Multicolumn View Reports
+         )
+; Section: Accounts
+
+(let ((option (gnc:lookup-option options
+                                 "Accounts"
+                                 "Accounts")))
+  ((lambda (o) (if o (gnc:option-set-value o '("59d60886ce30ebf93c955c559c8e73c6")))) option))
+
+(let ((option (gnc:lookup-option options
+                                 "Accounts"
+                                 "Levels of Subaccounts")))
+  ((lambda (o) (if o (gnc:option-set-value o 'all))) option))
+
+
+; Section: Display
+
+
+; Section: General
+
+(let ((option (gnc:lookup-option options
+                                 "General"
+                                 "Report name")))
+  ((lambda (o) (if o (gnc:option-set-value o "Health Fund"))) option))
+
+(let ((option (gnc:lookup-option options
+                                 "General"
+                                 "Start Date")))
+  ((lambda (o) (if o (gnc:option-set-value o '(absolute . 1580468340)))) option))
+
+(let ((option (gnc:lookup-option options
+                                 "General"
+                                 "End Date")))
+  ((lambda (o) (if o (gnc:option-set-value o '(relative . end-this-month)))) option))
+
+(let ((option (gnc:lookup-option options
+                                 "General"
+                                 "Price Source")))
+  ((lambda (o) (if o (gnc:option-set-value o 'pricedb-latest))) option))
+
+
+      options
+    )
+  )
+  (gnc:define-report 
+    'version 1
+    'name "Health Fund over Time"
+    'report-guid "3c0a4891172b4b78a62919e6544384da"
+    'parent-type "faf410e8f8da481fbc09e4763da40bcc"
+    'options-generator options-gen
+    'menu-path (list gnc:menuname-custom)
+    'renderer (gnc:report-template-renderer/report-guid "faf410e8f8da481fbc09e4763da40bcc" "Liabilities Over Time")
+  )
+)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Options for saved report "Groceries, Gas and Cash", based on template "2fe3b9833af044abb929a88d5a59620f"
+(let ()
+  (define (options-gen)
+    (let
+         (
+           (options (gnc:report-template-new-options/report-guid "2fe3b9833af044abb929a88d5a59620f" "Transaction Report"))
+           (new-embedded-report-ids '()) ;; only used with Multicolumn View Reports
+         )
+; Section: Accounts
+
+(let ((option (gnc:lookup-option options
+                                 "Accounts"
+                                 "Accounts")))
+  ((lambda (o) (if o (gnc:option-set-value o '("4a0bbd9725e2f9e7a6c4c5806dd38cea")))) option))
+
+
+; Section: Currency
+
+
+; Section: Display
+
+(let ((option (gnc:lookup-option options
+                                 "Display"
+                                 "Subtotal Table")))
+  ((lambda (o) (if o (gnc:option-set-value o #t))) option))
+
+
+; Section: Filter
+
+(let ((option (gnc:lookup-option options
+                                 "Filter"
+                                 "Transaction Filter")))
+  ((lambda (o) (if o (gnc:option-set-value o "Groceries|WalMart|Albertsons|Gas|Cash|Dining Out"))) option))
+
+(let ((option (gnc:lookup-option options
+                                 "Filter"
+                                 "Use regular expressions for transaction filter")))
+  ((lambda (o) (if o (gnc:option-set-value o #t))) option))
+
+
+; Section: General
+
+(let ((option (gnc:lookup-option options
+                                 "General"
+                                 "Start Date")))
+  ((lambda (o) (if o (gnc:option-set-value o '(absolute . 1704106740)))) option))
+
+
+; Section: Sorting
+
+(let ((option (gnc:lookup-option options
+                                 "Sorting"
+                                 "Primary Key")))
+  ((lambda (o) (if o (gnc:option-set-value o 'date))) option))
+
+(let ((option (gnc:lookup-option options
+                                 "Sorting"
+                                 "Secondary Key")))
+  ((lambda (o) (if o (gnc:option-set-value o 'none))) option))
+
+
+; Section: __trep
+
+
+      options
+    )
+  )
+  (gnc:define-report 
+    'version 1
+    'name "Groceries, Gas and Cash"
+    'report-guid "c94f64ce42f34531b8d7a1e26a190686"
+    'parent-type "2fe3b9833af044abb929a88d5a59620f"
+    'options-generator options-gen
+    'menu-path (list gnc:menuname-custom)
+    'renderer (gnc:report-template-renderer/report-guid "2fe3b9833af044abb929a88d5a59620f" "Transaction Report")
+  )
+)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Options for saved report "Vacation Fund", based on template "2fe3b9833af044abb929a88d5a59620f"
+(let ()
+  (define (options-gen)
+    (let
+         (
+           (options (gnc:report-template-new-options/report-guid "2fe3b9833af044abb929a88d5a59620f" "Transaction Report"))
+           (new-embedded-report-ids '()) ;; only used with Multicolumn View Reports
+         )
+; Section: Accounts
+
+(let ((option (gnc:lookup-option options
+                                 "Accounts"
+                                 "Accounts")))
+  ((lambda (o) (if o (gnc:option-set-value o '("4a0bbd9725e2f9e7a6c4c5806dd38cea")))) option))
+
+
+; Section: Currency
+
+
+; Section: Display
+
+(let ((option (gnc:lookup-option options
+                                 "Display"
+                                 "Subtotal Table")))
+  ((lambda (o) (if o (gnc:option-set-value o #t))) option))
+
+
+; Section: Filter
+
+(let ((option (gnc:lookup-option options
+                                 "Filter"
+                                 "Transaction Filter")))
+  ((lambda (o) (if o (gnc:option-set-value o "Vacation Fund|Home Maintenance Fund"))) option))
+
+(let ((option (gnc:lookup-option options
+                                 "Filter"
+                                 "Use regular expressions for transaction filter")))
+  ((lambda (o) (if o (gnc:option-set-value o #t))) option))
+
+(let ((option (gnc:lookup-option options
+                                 "Filter"
+                                 "Transaction Filter excludes matched strings")))
+  ((lambda (o) (if o (gnc:option-set-value o #t))) option))
+
+
+; Section: General
+
+(let ((option (gnc:lookup-option options
+                                 "General"
+                                 "Start Date")))
+  ((lambda (o) (if o (gnc:option-set-value o '(absolute . 1672570740)))) option))
+
+(let ((option (gnc:lookup-option options
+                                 "General"
+                                 "End Date")))
+  ((lambda (o) (if o (gnc:option-set-value o '(relative . end-this-month)))) option))
+
+
+; Section: Sorting
+
+(let ((option (gnc:lookup-option options
+                                 "Sorting"
+                                 "Primary Key")))
+  ((lambda (o) (if o (gnc:option-set-value o 'date))) option))
+
+(let ((option (gnc:lookup-option options
+                                 "Sorting"
+                                 "Secondary Key")))
+  ((lambda (o) (if o (gnc:option-set-value o 'date))) option))
+
+(let ((option (gnc:lookup-option options
+                                 "Sorting"
+                                 "Secondary Subtotal for Date Key")))
+  ((lambda (o) (if o (gnc:option-set-value o 'none))) option))
+
+
+; Section: __trep
+
+
+      options
+    )
+  )
+  (gnc:define-report 
+    'version 1
+    'name "Vacation Fund"
+    'report-guid "5ea3a1bbeb44499690a6233ecfcfb56a"
+    'parent-type "2fe3b9833af044abb929a88d5a59620f"
+    'options-generator options-gen
+    'menu-path (list gnc:menuname-custom)
+    'renderer (gnc:report-template-renderer/report-guid "2fe3b9833af044abb929a88d5a59620f" "Transaction Report")
+  )
+)
+
