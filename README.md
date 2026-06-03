@@ -5,12 +5,6 @@ Setup dotfiles git repository
 -----------------------------
 
 ```
-chsh -s $(which fish)
-```
-
-Logout and Login for new shell to take effect
-
-```
 nano $HOME/.config/fish/config.fish
 ```
 
@@ -50,7 +44,6 @@ Restore dotfiles from git repository
 ------------------------------------
 
 ```
-chsh -s $(which fish)
 git clone --separate-git-dir=$HOME/dot.git https://github.com/johnlevandowski/dotfiles.git $HOME/dot.git-tmp
 alias dotgit='git --git-dir=$HOME/dot.git/ --work-tree=$HOME'
 dotgit config status.showUntrackedFiles no

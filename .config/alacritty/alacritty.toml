@@ -2,12 +2,17 @@
 TERM = "xterm-256color"
 WINIT_X11_SCALE_FACTOR = "1"
 
+[terminal.shell]
+program = "/usr/bin/fish"
+args = ["-l"]
+
 [window]
 dynamic_padding = true
 decorations = "full"
 title = "Alacritty@CachyOS"
 opacity = 0.8
 decorations_theme_variant = "Dark"
+#startup_mode = "Maximized"
 
 [window.dimensions]
 columns = 120
