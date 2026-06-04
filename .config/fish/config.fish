@@ -133,3 +133,5 @@ export EDITOR='nano'
 export VISUAL='nano'
 
 alias dotgit='git --git-dir=$HOME/dot.git/ --work-tree=$HOME'
+
+alias du='dust -r'
