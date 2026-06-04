@@ -2,6 +2,7 @@
 
 /usr/bin/rclone copy --modify-window 1s /home/john/Documents/gnucash/finances.gnucash /mnt/rpi5/Documents/gnucash
 #/usr/bin/rclone copy --modify-window 1s /home/john/.local/share/gnucash/saved-reports-2.8 /mnt/rpi5/Documents/backup/GnuCash
+#wow wtf backup
 
 (
     SRC="/home/john/.config/mozilla/firefox/mz3wi842.default-release/bookmarks.html"
