@@ -49,6 +49,7 @@ alias dotgit='git --git-dir=$HOME/dot.git/ --work-tree=$HOME'
 dotgit config status.showUntrackedFiles no
 dotgit status
 dotgit diff
+cd
 dotgit restore .
 rm -rf $HOME/dot.git-tmp
 ```
@@ -61,6 +62,13 @@ Enable backup timer/service/script
 
 ```
 systemctl --user daemon-reload
+cd $HOME/.config/mozilla/firefox/
+micro $HOME/.local/bin/dev.johnl.backup.sh
+```
+
+Update script with *.default-relase directory
+
+```
 systemctl --user enable --now dev.johnl.backup.timer
 ```
 
