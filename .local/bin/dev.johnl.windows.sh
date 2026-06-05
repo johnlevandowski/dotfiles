@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# Making efibootmgr -n usable without sudo password
+# Making efibootmgr usable without sudo password
 # echo "%wheel ALL=(root) NOPASSWD: /usr/sbin/efibootmgr" | sudo tee /etc/sudoers.d/efibootmgr-config
 
 # Look up the boot number for Windows in the EFI records

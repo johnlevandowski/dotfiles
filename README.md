@@ -65,6 +65,14 @@ systemctl --user enable --now dev.johnl.backup.timer
 ```
 
 
+Enable Restart to Windows - Making efibootmgr usable without sudo password
+--------------------------------------------------------------------------
+
+```
+echo "%wheel ALL=(root) NOPASSWD: /usr/sbin/efibootmgr" | sudo tee /etc/sudoers.d/efibootmgr-config
+```
+
+
 Wallpaper Images
 ----------------
 
