@@ -54,19 +54,17 @@ dotgit restore .
 rm -rf $HOME/dot.git-tmp
 ```
 
-Logout and Login for new dotfiles to take effect
-
 
 Enable backup timer/service/script
 ----------------------------------
 
 ```
 systemctl --user daemon-reload
-cd $HOME/.config/mozilla/firefox/
+awk -F= '/^Default=/ {print $2; exit}' $HOME/.config/mozilla/firefox/profiles.ini
 micro $HOME/.local/bin/dev.johnl.backup.sh
 ```
 
-Update script with *.default-relase directory
+Update script with *.default-release directory
 
 ```
 systemctl --user enable --now dev.johnl.backup.timer
