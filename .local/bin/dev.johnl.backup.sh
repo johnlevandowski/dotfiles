@@ -5,7 +5,7 @@
 #wow wtf backup
 
 (
-    SRC="/home/john/.config/mozilla/firefox/s0oq3jgl.default-release/bookmarks.html"
+    SRC="/home/john/.config/mozilla/firefox/uq9o1j7q.default-release/bookmarks.html"
     DST_DIR="/mnt/rpi5/Documents/backup/Firefox"
     DST="$DST_DIR/bookmarks.html"
 

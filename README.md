@@ -60,7 +60,7 @@ Enable backup timer/service/script
 
 ```
 systemctl --user daemon-reload
-awk -F= '/^Default=/ {print $2; exit}' $HOME/.config/mozilla/firefox/profiles.ini
+ls $HOME/.config/mozilla/firefox/
 micro $HOME/.local/bin/dev.johnl.backup.sh
 ```
 
