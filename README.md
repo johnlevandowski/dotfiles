@@ -5,15 +5,7 @@ Setup dotfiles git repository
 -----------------------------
 
 ```
-nano $HOME/.config/fish/config.fish
-```
-
-```
 alias dotgit='git --git-dir=$HOME/dot.git/ --work-tree=$HOME'
-```
-
-```
-source $HOME/.config/fish/config.fish
 git init --bare --initial-branch=main $HOME/dot.git
 dotgit config status.showUntrackedFiles no
 gh repo create

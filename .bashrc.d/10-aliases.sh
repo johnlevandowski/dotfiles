@@ -4,13 +4,29 @@ alias dotgit='git --git-dir=$HOME/dot.git/ --work-tree=$HOME'
 
 upgrade_system() {
     if command -v apt &> /dev/null; then
+        echo "#########################################"
+        echo "## sudo apt update && sudo apt upgrade ##"
+        echo "#########################################"
         sudo apt update && sudo apt upgrade
     elif command -v dnf &> /dev/null; then
+        echo "######################"
+        echo "## sudo dnf upgrade ##"
+        echo "######################"
         sudo dnf upgrade
     elif command -v pacman &> /dev/null; then
+        echo "######################"
+        echo "## sudo pacman -Syu ##"
+        echo "######################"
         sudo pacman -Syu
     else
         echo "Error: No matching package manager found."
+    fi
+
+    if command -v flatpak &> /dev/null; then
+        echo "#####################"
+        echo "## flatpak upgrade ##"
+        echo "#####################"
+        flatpak upgrade
     fi
 }
 alias upgrade='upgrade_system'
