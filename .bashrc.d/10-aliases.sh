@@ -2,6 +2,12 @@ alias jctl="journalctl -p 4 -xb"
 alias pdmn="sudo machinectl shell john-podman@"
 alias dotgit='git --git-dir=$HOME/dot.git/ --work-tree=$HOME'
 
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    alias ls='ls -lahZ --color=auto'
+    alias grep='grep --color=auto'
+fi
+
 upgrade_system() {
     if command -v apt &> /dev/null; then
         echo "#########################################"
