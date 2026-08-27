@@ -1,6 +1,7 @@
 alias jctl="journalctl -p 4 -xb"
 alias pdmn="sudo machinectl shell john-podman@"
-alias dotgit='git --git-dir=$HOME/dot.git/ --work-tree=$HOME'
+alias dotgit="git --git-dir=$HOME/dot.git/ --work-tree=$HOME"
+alias du="dust -r -b -d 2 -n 30"
 
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
