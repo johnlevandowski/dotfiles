@@ -35,10 +35,20 @@ upgrade_system() {
     fi
 
     if command -v flatpak &> /dev/null; then
+        echo ""
         echo "#####################"
         echo "## flatpak upgrade ##"
         echo "#####################"
         flatpak upgrade
+    fi
+
+    if command -v fwupdmgr &> /dev/null; then
+        echo ""
+        echo "########################################################"
+        echo "## sudo fwupdmgr refresh && sudo fwupdmgr get-updates ##"
+        echo "########################################################"
+        sudo fwupdmgr refresh
+        sudo fwupdmgr get-updates
     fi
 }
 alias upgrade='upgrade_system'
