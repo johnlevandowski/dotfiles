@@ -1,5 +1,6 @@
 alias jctl="journalctl -p 4 -xb"
 alias pdmn="sudo machinectl shell john-podman@"
+alias cdpod="cd $HOME/.config/containers/systemd/ && ls"
 alias dotgit="git --git-dir=$HOME/dot.git/ --work-tree=$HOME"
 
 if [ command -v dust >/dev/null 2>&1 ]; then
